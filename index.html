@@ -1,0 +1,193 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deepikha S | Landing Page</title>
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --card: #1f2833;
+      --text: #ffffff;
+      --accent: #09dae2c5;
+      --glow: 0 0 5px #d71493, 0 0 10px #05deea, 0 0 15px #f415d2;
+    }* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0b0c10, #142433, #102a38);
+  color: var(--text);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Animated sparkle background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: sparkleMove 60s linear infinite;
+  z-index: -1;
+}
+
+@keyframes sparkleMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+header {
+  text-align: center;
+  padding: 60px 20px 20px;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: var(--accent);
+  text-shadow: var(--glow);
+  animation: fadeInUp 2s ease forwards;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  opacity: 0.8;
+  animation: fadeInUp 2s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.buttons {
+  margin-top: 20px;
+  animation: fadeInUp 2s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.buttons button {
+  background: var(--accent);
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: var(--glow);
+  font-weight: bold;
+}
+
+section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h2 {
+  color: var(--accent);
+  text-shadow: var(--glow);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+  box-shadow: 0 0 5px rgba(0, 247, 255, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--glow);
+}
+
+.card h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.card a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+.contact a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Deepikha S</h1>
+    <p>Web Developer & Data Analyst</p>
+    <div class="buttons">
+      <button onclick="window.location.href='Resume.pdf'">📄 Download Resume</button>
+      <button onclick="window.location.href='mailto:deepikha216@gmail.com'">📨 Contact Me</button>
+    </div>
+  </header>  <section>
+    <h2>About Me</h2>
+    <p style="text-align:center; max-width:700px; margin: 0 auto;">
+      I'm currently interning at CodSoft and CodeAlpha where I build modern, responsive websites and explore data with Python.
+    </p>
+  </section>  <section>
+    <h2>Featured Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>💻 Neon Portfolio Website (CodSoft)</h3>
+        <p>Personal website with neon purple theme, resume, and light/dark toggle.</p>
+        <a href="https://github.com/Deepikha21/codsoft_portfolio" target="_blank">View on GitHub</a>
+      </div>
+      <div class="card">
+        <h3>🧮 Pink Theme Calculator (CodSoft)</h3>
+        <p>Custom-styled calculator with light/dark mode toggle.</p>
+        <a href="https://github.com/Deepikha21/CodSoft_calculator" target="_blank">View on GitHub</a>
+      </div>
+      <div class="card">
+        <h3>🔍 Web Scraping (CodeAlpha)</h3>
+        <p>Scraped real websites using Python and BeautifulSoup for data analysis.</p>
+        <a href="https://github.com/Deepikha21/CodeAlpha_WebScraping" target="_blank">View on GitHub</a>
+      </div>
+      <div class="card">
+        <h3>📊 EDA & Visualization (CodeAlpha)</h3>
+        <p>Performed data exploration and created visual dashboards using Python libraries.</p>
+        <a href="https://github.com/Deepikha21/CodeAlpha_Task" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+  </section>  <section>
+    <h2>Contact</h2>
+    <div class="contact" style="text-align:center;">
+      <p>Email: <a href="mailto:deepikha216@gmail.com">deepikha216@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/deepikha-s-051551291" target="_blank">Deepikha S</a></p>
+      <p>GitHub: <a href="https://github.com/Deepikha21" target="_blank">@Deepikha21</a></p>
+    </div>
+  </section>  <footer>
+    © 2025 Deepikha S. All rights reserved.
+  </footer>
+</body>
+</html>
